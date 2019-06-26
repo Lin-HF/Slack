@@ -109,7 +109,7 @@ class Register extends React.Component {
     return (
       <Grid textAlign="center" verticalAlign="middle" className="app">
         <Grid.Column style={{ maxWidth: 450 }}>
-          <Header as="h2" icon color="orange" textAlign="center">
+          <Header as="h1" icon color="orange" textAlign="center">
             <Icon name="puzzle piece" color="orange" />
             Register for DevChat
           </Header>
@@ -161,9 +161,7 @@ class Register extends React.Component {
               <Button disabled={loading} className={loading ? 'loading' : ''} color="orange" fluid size="large">
                 Submit
               </Button>
-              <Message>
-                Already a user? <Link to="/login">Login</Link>
-              </Message>
+              
             </Segment>
           </Form>
           {this.state.errors.length > 0 && (
@@ -172,6 +170,9 @@ class Register extends React.Component {
                   {this.displayErrors(errors)}
               </Message>
           )}
+          <Message>
+                Already a user? <Link to="/login">Login</Link>
+              </Message>
         </Grid.Column>
       </Grid>
       
